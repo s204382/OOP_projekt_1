@@ -11,5 +11,9 @@
             fx:controller="control.AnsvarligSide"
             prefHeight="400.0" prefWidth="600.0">
     <Label fx:id="label1">Ansvarlig side er fremvist her</Label>
-    <Label fx:id="label2">Ansvarlig side er fremvist her</Label>
+    <TextField fx:id="boothnameW" prefWidth="200.0" promptText="booth name" />
+    <TextField fx:id="boothresponsibleW" prefWidth="200.0" promptText="resonsible"  />
+    <TextField fx:id="boothplaceW" prefWidth="200.0" promptText="place" />
+    <Button fx:id="Makebooth" onAction="#createBooth" />
+
 </FlowPane>

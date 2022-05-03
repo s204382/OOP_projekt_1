@@ -20,15 +20,13 @@ public class LogIn {
 
     //public LogIn() throws FileNotFoundException {}
 
-
     public void setMainController(Frivillig frivillig){
         this.frivilligApp =frivillig;
 
     }
 
-
     public void btnClick(ActionEvent actionEvent) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\charl\\OneDrive\\Dokumenter\\GitHub\\Projekt1\\Gitty\\coworker.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\charl\\OneDrive\\Dokumenter\\GitHub\\OOP_projekt_1\\coworker.txt"));
 
 
         String enteredMail;
@@ -47,13 +45,18 @@ public class LogIn {
             String[] infosplit = readlines.trim().split("\\s+");
             String mailfromtxt = infosplit[0]; // mail
             String codefromtxt = infosplit[1]; // code
-            String rolefromtxt = infosplit[3]; // role
+            String rolefromtxt = infosplit[2]; // role
+            String fnamefromtxt = infosplit[3]; // first name
+            String lnamefromtxt = infosplit[4]; // last name
+
+            System.out.println(mailfromtxt+" "+codefromtxt+" "+rolefromtxt+" "+fnamefromtxt+" "+lnamefromtxt);
 
 
 
             if(enteredMail.equalsIgnoreCase(mailfromtxt) && enteredCode.equals(codefromtxt)){
 
                 if(rolefromtxt.equals("ansvarlig")){
+
                     frivilligApp.AnsvarligSide();
                 }
                 else{
@@ -63,8 +66,11 @@ public class LogIn {
 
             }
 
-
             readlines=reader.readLine();
+
+
+
+
 
         }
 
