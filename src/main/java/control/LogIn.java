@@ -28,10 +28,8 @@ public class LogIn {
     public void btnClick(ActionEvent actionEvent) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\charl\\OneDrive\\Dokumenter\\GitHub\\OOP_projekt_1\\coworker.txt"));
 
-
         String enteredMail;
         String enteredCode;
-
         String readlines;
 
         enteredMail = fieldMail.getText();
