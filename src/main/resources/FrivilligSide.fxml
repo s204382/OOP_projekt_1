@@ -13,18 +13,18 @@
          xmlns="http://javafx.com/javafx"
             fx:controller="control.FrivilligSide">
     <tabs>
-        <Tab closable="false" text="Se vagtplan"  fx:id="vagtplantab">
+        <Tab closable="false" text="See plan"  fx:id="vagtplantab">
             <content>
                 <TableView prefHeight="355.0" prefWidth="342.0">
                     <columns>
-                        <TableColumn prefWidth="148.0" text="Bod/aktivitet" />
-                        <TableColumn prefWidth="86.0" text="Tid" />
-                        <TableColumn prefWidth="137.0" text="Sted" />
-                        <TableColumn prefWidth="103.0" text="Ansvarlig" />
+                        <TableColumn prefWidth="148.0" text="BoothC" fx:id="boothCollum" />
+                        <TableColumn prefWidth="86.0" text="Time" />
+                        <TableColumn prefWidth="137.0" text="Place" />
+                        <TableColumn prefWidth="103.0" text="Responsible" />
                     </columns>
                 </TableView>
             </content></Tab>
-        <Tab closable="false" text="Se/ændre oplysninger">
+        <Tab closable="false" text="Information">
             <content>
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>

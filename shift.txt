@@ -1,2 +1,2 @@
-medarbejder starttidspunkt lokation længde bod
+fname lname time location 2 kitty
 charlotte 12:00 lokation 2 kitty

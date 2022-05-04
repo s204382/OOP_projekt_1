@@ -17,7 +17,7 @@ public class AnsvarligSide {
     //read booth info
     /*BufferedReader readerbooth = new BufferedReader(new FileReader("C:\\Users\\charl\\OneDrive\\Dokumenter\\GitHub\\Projekt1\\Gitty\\booth.txt"));
     String boothline = readerbooth.readLine();
-    String[] boothinfo = boothline.trim().split("-");
+    String[] boothinfo = boothline.trim().split(" ");
     String namebooth = boothinfo[0]; // name of booth
     String placebooth = boothinfo[1]; // placement of booth
     String responsiblebooth = boothinfo[3]; // responsible of the booth*/
@@ -39,7 +39,7 @@ public class AnsvarligSide {
         enteredBoothPlace = boothplaceW.getText();
         enteredBoothResp = boothresponsibleW.getText();
 
-        boothWriter.write(enteredBoothName + "-" + enteredBoothPlace + "-" + enteredBoothResp);
+        boothWriter.write("\n" + enteredBoothName + "-" + enteredBoothPlace + "-" + enteredBoothResp);
         //find ud af hvordan man indskriver på den næste tomme linje,,
         boothWriter.close();
 

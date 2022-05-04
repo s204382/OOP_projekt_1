@@ -1,19 +1,24 @@
 package control;
 
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.util.Callback;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class FrivilligSide {
-    public Label label1;
+    //public Label label1;
     public control.Frivillig frivilligApp;
-    public TabPane vagtTab;
-    //public ListView shiftList;
-    //public TextFlow information;
+    //public TableColumn boothCollum;
 
-    public ListView ShiftList;
-    public Tab vagtplantab;
+
+    //public TableView Shift;
+
 
 
     public void setMainController(Frivillig frivillig){
@@ -21,9 +26,30 @@ public class FrivilligSide {
 
     }
 
-    public TabPane ShowVagtTab() {
+    public void vagtplantab() throws IOException {
+        BufferedReader readershift = new BufferedReader(new FileReader("booth.txt"));
+        String shiftline = readershift.readLine();
+        //read first line
 
-        return vagtTab;
+        while(shiftline!=null){
+
+
+            String[] shiftinfo = shiftline.trim().split(" ");
+            String fname = shiftinfo[0]; // first name
+            String lname = shiftinfo[1]; // last name
+            String begintime = shiftinfo[2]; // begin time of the shift
+            String location = shiftinfo[3]; //location of the boof
+            String length = shiftinfo[4]; //leangth of shift
+            String boothname = shiftinfo[5]; //name of booth
+
+
+
+
+        }
+
+
+
+
     }
     //shiftList.add
 
