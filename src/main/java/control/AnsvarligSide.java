@@ -40,6 +40,7 @@ public class AnsvarligSide {
         enteredBoothResp = boothresponsibleW.getText();
 
         boothWriter.write(enteredBoothName + "-" + enteredBoothPlace + "-" + enteredBoothResp);
+        //find ud af hvordan man indskriver på den næste tomme linje,,
         boothWriter.close();
 
     }

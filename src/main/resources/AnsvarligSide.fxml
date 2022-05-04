@@ -6,14 +6,70 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<FlowPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="control.AnsvarligSide"
-            prefHeight="400.0" prefWidth="600.0">
-    <Label fx:id="label1">Ansvarlig side er fremvist her</Label>
-    <TextField fx:id="boothnameW" prefWidth="200.0" promptText="booth name" />
-    <TextField fx:id="boothresponsibleW" prefWidth="200.0" promptText="resonsible"  />
-    <TextField fx:id="boothplaceW" prefWidth="200.0" promptText="place" />
-    <Button fx:id="Makebooth" onAction="#createBooth" />
+<TabPane  prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE"
+              xmlns:fx="http://javafx.com/fxml"
+              xmlns="http://javafx.com/javafx"
+              fx:controller="control.AnsvarligSide" >
+        <tabs>
+            <Tab closable="false" text="Se vagtplan">
+                <content>
+                    <TableView editable="true" prefHeight="316.0" prefWidth="600.0">
+                        <columns>
+                            <TableColumn prefWidth="121.0" text="Bod/aktivitet" />
+                            <TableColumn prefWidth="75.0" text="Tid" />
+                            <TableColumn prefWidth="127.0" text="Sted" />
+                            <TableColumn minWidth="0.0" prefWidth="91.0" text="Ansvarlig" />
+                            <TableColumn prefWidth="168.0" text="                  ">
+                                <graphic>
+                                    <MenuButton mnemonicParsing="false" text="Sortering">
+                                        <items>
+                                            <MenuItem mnemonicParsing="false" text="Medarbejder" />
+                                            <MenuItem mnemonicParsing="false" text="Boder" />
+                                        </items>
+                                    </MenuButton>
+                                </graphic>
+                            </TableColumn>
+                        </columns>
+                    </TableView>
+                </content></Tab>
+            <Tab closable="false" text="administre oplysninger">
+                <content>
+                    <VBox prefHeight="200.0" prefWidth="100.0">
+                        <children>
+                            <Label prefHeight="27.0" prefWidth="200.0" text="First name:" />
+                            <Label prefHeight="27.0" prefWidth="200.0" text="Last name" />
+                            <Label prefHeight="27.0" prefWidth="200.0" text="Phone" />
+                            <Label prefWidth="200.0" text="Mail" />
+                            <Label prefWidth="200.0" text="Password" />
+                            <TextArea prefHeight="31.0" prefWidth="600.0" promptText="skriv mail ind på hvem du gerne vil rette" />
+                            <Button mnemonicParsing="false" text="Change info" />
+                        </children>
+                    </VBox>
+                </content></Tab>
+            <Tab closable="false" text="Administre bod">
+                <content>
+                    <VBox prefHeight="200.0" prefWidth="100.0">
+                        <children>
+                            <Label prefWidth="600.0" text="Opret ny bod" textAlignment="CENTER" underline="true" />
+                            <Label prefHeight="27.0" prefWidth="200.0" text="Bod navn" />
+                            <Label prefHeight="27.0" prefWidth="200.0" text="Ansvarlig" />
+                            <Label prefHeight="27.0" prefWidth="200.0" text="Sted" />
+                            <Button mnemonicParsing="false" text="Opret ny bod" />
+                            <Label layoutX="10.0" layoutY="10.0" prefWidth="600.0" text="Ret bod" textAlignment="CENTER" underline="true" />
+                            <TextArea prefHeight="31.0" prefWidth="600.0" promptText="Hvilken bod du vil rette" />
 
-</FlowPane>
+                            <Label fx:id="label1">Ansvarlig side er fremvist her</Label>
+                            <TextField fx:id="boothnameW" prefWidth="200.0" promptText="booth name" />
+                            <TextField fx:id="boothresponsibleW" prefWidth="200.0" promptText="resonsible"  />
+                            <TextField fx:id="boothplaceW" prefWidth="200.0" promptText="place" />
+                            <Button fx:id="Makebooth" onAction="#createBooth" textAlignment="CENTER" text="create booth" />
+
+                            <Button mnemonicParsing="false" text="Ret bod" />
+                        </children>
+                    </VBox>
+                </content>
+            </Tab>
+        </tabs>
+</TabPane>
+
+

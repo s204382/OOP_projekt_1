@@ -9,12 +9,12 @@
 <FlowPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="control.LogIn"
-            prefHeight="400.0" prefWidth="600.0">
-    <Label fx:id="label1">Enter Mail</Label>
-    <Label fx:id="label2">Enter Code</Label>
-    <TextField fx:id="fieldMail" prefWidth="200.0" />
-    <TextField fx:id="fieldCode" prefWidth="200.0" />
-    <Button fx:id="buttonLogin" onAction="#btnClick" text="press here to log in" />
+            prefHeight="200.0" prefWidth="400.0">
+    <Label fx:id="label1">Enter Mail</Label> <TextField fx:id="fieldMail" prefWidth="150.0" promptText="Mail" alignment="TOP_LEFT" />
+
+    <Label fx:id="label2">Enter Code</Label> <TextField fx:id="fieldCode" prefWidth="150.0" promptText="Code" alignment="TOP_RIGHT" />
+
+    <Button fx:id="buttonLogin" onAction="#btnClick" text="Log in" alignment="BASELINE_CENTER"/>
 
 
 </FlowPane>

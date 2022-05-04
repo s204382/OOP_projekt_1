@@ -2,17 +2,18 @@ package control;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.text.TextFlow;
-
-import java.util.Set;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 
 public class FrivilligSide {
     public Label label1;
     public control.Frivillig frivilligApp;
+    public TabPane vagtTab;
     //public ListView shiftList;
     //public TextFlow information;
 
     public ListView ShiftList;
+    public Tab vagtplantab;
 
 
     public void setMainController(Frivillig frivillig){
@@ -20,15 +21,10 @@ public class FrivilligSide {
 
     }
 
+    public TabPane ShowVagtTab() {
 
-    public void ShowShifts(){
-        ShiftList.isEditable();
-
-
-
-
+        return vagtTab;
     }
-
     //shiftList.add
 
     //shiftList.addAll("1","2","3");

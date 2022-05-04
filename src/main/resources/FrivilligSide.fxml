@@ -1,24 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.text.TextFlow?>
-<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.FrivilligSide">
-    <children>
-        <VBox prefHeight="400.0" prefWidth="288.0">
-            <children>
-                <Label fx:id="label1">Se vagtplan</Label>
-                <ListView fx:id="ShiftList" prefHeight="381.0" prefWidth="288.0"/>
-            </children>
-        </VBox>
-        <VBox prefHeight="400.0" prefWidth="312.0">
-            <children>
-                <Label text="Oplysninger" />
-                <TextFlow fx:id="information" prefHeight="200.0" prefWidth="200.0" />
-            </children>
-        </VBox>
-    </children>
-</FlowPane>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+
+<TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE"
+         xmlns:fx="http://javafx.com/fxml"
+         xmlns="http://javafx.com/javafx"
+            fx:controller="control.FrivilligSide">
+    <tabs>
+        <Tab closable="false" text="Se vagtplan"  fx:id="vagtplantab">
+            <content>
+                <TableView prefHeight="355.0" prefWidth="342.0">
+                    <columns>
+                        <TableColumn prefWidth="148.0" text="Bod/aktivitet" />
+                        <TableColumn prefWidth="86.0" text="Tid" />
+                        <TableColumn prefWidth="137.0" text="Sted" />
+                        <TableColumn prefWidth="103.0" text="Ansvarlig" />
+                    </columns>
+                </TableView>
+            </content></Tab>
+        <Tab closable="false" text="Se/ændre oplysninger">
+            <content>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Label prefHeight="27.0" prefWidth="200.0" text="First name" />
+                        <Label prefHeight="27.0" prefWidth="200.0" text="Last name" />
+                        <Label prefHeight="27.0" prefWidth="200.0" text="Phone" />
+                        <Label prefWidth="200.0" text="Mail" />
+                        <Label prefWidth="200.0" text="Password" />
+                        <Button mnemonicParsing="false" text="Change info" />
+                    </children>
+                </VBox>
+            </content></Tab>
+    </tabs>
+</TabPane>

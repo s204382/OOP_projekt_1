@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
@@ -46,7 +47,8 @@ public void Login() throws IOException {
 
     public void FrivilligSide() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FrivilligSide.fxml")); //loader fra en class i re
-        FlowPane pane = loader.load();
+        TabPane pane = loader.load();
+        //FrivilligSide controller = loader.getController();
         FrivilligSide controller = loader.getController();
         controller.setMainController(this);
         Scene scene = new Scene(pane,800,600 );
@@ -55,7 +57,7 @@ public void Login() throws IOException {
     }
     public void AnsvarligSide() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/AnsvarligSide.fxml")); //loader fra en class i re
-        FlowPane pane = loader.load();
+        TabPane pane = loader.load();
         AnsvarligSide controller = loader.getController();
         controller.setMainController(this);
         Scene scene = new Scene(pane,800,600 );
