@@ -13,7 +13,6 @@ public class LogIn {
 
     public TextField fieldMail;
     public TextField fieldCode;
-
     public Button buttonLogin;
 
     public control.Frivillig frivilligApp;
@@ -58,7 +57,8 @@ public class LogIn {
                     frivilligApp.AnsvarligSide();
                 }
                 else{
-                    frivilligApp.FrivilligSide();
+
+                    frivilligApp.FrivilligSide();;
                 }
 
 
