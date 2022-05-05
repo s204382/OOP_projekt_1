@@ -29,7 +29,7 @@ public class Frivillig extends Application {
         primaryScene guiContr = loader.getController();
         guiContr.setMainController(this);
 
-        Scene scene = new Scene(flowPane,800,600 );
+        Scene scene = new Scene(flowPane,400,200 );
         stage.setScene(scene);
         stage.show();
 
@@ -40,7 +40,7 @@ public void Login() throws IOException {
     FlowPane pane = loader.load();
     LogIn controller = loader.getController();
     controller.setMainController(this);
-    Scene scene = new Scene(pane,800,600 );
+    Scene scene = new Scene(pane,400,200 );
     stage.setScene(scene);
 
 }

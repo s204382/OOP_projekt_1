@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<FlowPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LogIn">
-    <HBox prefHeight="24.0" prefWidth="400.0" />
-    <HBox layoutX="10.0" layoutY="10.0" prefHeight="24.0" prefWidth="402.0">
+<FlowPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="control.LogIn">
+    <HBox prefHeight="5.0" prefWidth="400.0" />
+    <HBox layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="402.0">
         <children>
             <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="402.0" text="Enter Mail">Enter Mail</Label>
         </children>
     </HBox>
-    <HBox alignment="TOP_CENTER" prefHeight="30.0" prefWidth="400.0">
+    <HBox alignment="TOP_CENTER" prefHeight="32.0" prefWidth="400.0">
         <children> <TextField fx:id="fieldMail" alignment="TOP_LEFT" prefWidth="150.0" promptText="Mail" />
         </children>
     </HBox>
-    <HBox prefHeight="24.0" prefWidth="400.0">
+    <HBox prefHeight="32.0" prefWidth="400.0">
         <children>
 
-            <Label fx:id="label2" alignment="CENTER" prefHeight="18.0" prefWidth="412.0">Enter Code</Label>
+            <Label fx:id="label2" alignment="CENTER" prefHeight="18.0" prefWidth="400.0">Enter Code</Label>
         </children>
     </HBox>
     <HBox alignment="TOP_CENTER" prefHeight="32.0" prefWidth="400.0">

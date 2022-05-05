@@ -17,7 +17,7 @@ public class LogIn {
 
     public control.Frivillig frivilligApp;
 
-    //public LogIn() throws FileNotFoundException {}
+
 
     public void setMainController(Frivillig frivillig){
         this.frivilligApp =frivillig;

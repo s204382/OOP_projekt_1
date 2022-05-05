@@ -8,10 +8,11 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.Button?>
 
+<?import javafx.scene.control.TextField?>
 <TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE"
          xmlns:fx="http://javafx.com/fxml"
          xmlns="http://javafx.com/javafx"
-            fx:controller="control.FrivilligSide">
+         fx:controller="control.FrivilligSide">
     <tabs>
         <Tab closable="false" text="See plan"  fx:id="SeePlan">
             <content>
@@ -26,14 +27,14 @@
             </content></Tab>
         <Tab closable="false" text="Information">
             <content>
-                <VBox prefHeight="200.0" prefWidth="100.0">
+                <VBox prefHeight="200.0" prefWidth="100.0" >
                     <children>
-                        <Label prefHeight="27.0" prefWidth="200.0" text="First name" />
-                        <Label prefHeight="27.0" prefWidth="200.0" text="Last name" />
-                        <Label prefHeight="27.0" prefWidth="200.0" text="Phone" />
-                        <Label prefWidth="200.0" text="Mail" />
-                        <Label prefWidth="200.0" text="Password" />
-                        <Button mnemonicParsing="false" text="Change info" onAction="btnPress"/>
+                        <Label prefHeight="27.0" prefWidth="200.0" text="First name:" /> <Label fx:id="LabelFname" prefHeight="27.0" prefWidth="200.0" /> <TextField fx:id="FnameChange" promptText="Change first name" />
+                        <Label prefHeight="27.0" prefWidth="200.0" text="Last name:" /> <TextField fx:id="LnameChange" promptText="Change last name" />
+                        <Label prefHeight="27.0" prefWidth="200.0" text="Phone:" />
+                        <Label prefWidth="200.0" text="Mail:" />
+                        <Label prefWidth="200.0" text="Password:" />
+                        <Button mnemonicParsing="false" text="Change info" fx:id="changeInfoBtn" onAction="#btnChangeInfo" />
                     </children>
                 </VBox>
             </content></Tab>

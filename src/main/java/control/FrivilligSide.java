@@ -1,20 +1,13 @@
 package control;
 
-import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.util.Callback;
+import javafx.event.ActionEvent;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -39,6 +32,10 @@ public class FrivilligSide implements Initializable {
 
     public TableColumn<Shift, String> Admin;
 
+    public Button changeInfoBtn;
+
+    public Label LabelFname;
+
 
     ObservableList<Shift> shift = FXCollections.observableArrayList(
             new Shift("1/5 8:00AM", "Next to concert hall A", "Drink Seller","God"),
@@ -54,7 +51,21 @@ public class FrivilligSide implements Initializable {
 
         shifts.setItems(shift);
 
+        LabelFname.setText("fornavn<3");
+
+
+
     }
+
+
+
+    public void btnChangeInfo(ActionEvent actionEvent){
+
+
+    }
+
+
+
 
 /*    public void btnPress(ActionEvent actionEvent) throws IOException {
 
