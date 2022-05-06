@@ -18,8 +18,8 @@
             <content>
                 <TableView prefHeight="355.0" prefWidth="342.0" fx:id="shifts">
                     <columns>
-                        <TableColumn prefWidth="148.0" text="BoothC" fx:id="Booth" />
-                        <TableColumn prefWidth="86.0" text="Booth" fx:id="Time"/>
+                        <TableColumn prefWidth="148.0" text="Time" fx:id="Time" />
+                        <TableColumn prefWidth="86.0" text="Booth" fx:id="Booth"/>
                         <TableColumn prefWidth="137.0" text="Place" fx:id="Place"/>
                         <TableColumn prefWidth="103.0" text="Admin" fx:id="Admin"/>
                     </columns>

@@ -10,7 +10,6 @@ import java.io.*;
 
 public class LogIn {
     public Label label1;
-
     public TextField fieldMail;
     public TextField fieldCode;
     public Button buttonLogin;
@@ -46,7 +45,7 @@ public class LogIn {
             String fnamefromtxt = infosplit[3]; // first name
             String lnamefromtxt = infosplit[4]; // last name
 
-            //System.out.println(mailfromtxt+" "+codefromtxt+" "+rolefromtxt+" "+fnamefromtxt+" "+lnamefromtxt);
+            System.out.println(mailfromtxt+" "+codefromtxt+" "+rolefromtxt+" "+fnamefromtxt+" "+lnamefromtxt);
 
 
 
@@ -58,7 +57,8 @@ public class LogIn {
                 }
                 else{
 
-                    frivilligApp.FrivilligSide();;
+                    frivilligApp.FrivilligSide();
+
                 }
 
 

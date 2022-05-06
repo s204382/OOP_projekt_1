@@ -8,7 +8,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.event.ActionEvent;
 
 
+import java.io.*;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class FrivilligSide implements Initializable {
@@ -21,39 +23,35 @@ public class FrivilligSide implements Initializable {
 
     }
 
-    //removed @FXML since they know B)
-    public TableView<Shift> shifts;
+    public TableView<ShiftInfo> shifts;
 
-    public TableColumn<Shift, String> Time;
+    public TableColumn<ShiftInfo, String> Time;
 
-    public TableColumn<Shift, String> Place;
+    public TableColumn<ShiftInfo, String> Place;
 
-    public TableColumn<Shift, String> Booth;
+    public TableColumn<ShiftInfo, String> Booth;
 
-    public TableColumn<Shift, String> Admin;
+    public TableColumn<ShiftInfo, String> Admin;
 
     public Button changeInfoBtn;
 
     public Label LabelFname;
 
 
-    ObservableList<Shift> shift = FXCollections.observableArrayList(
-            new Shift("1/5 8:00AM", "Next to concert hall A", "Drink Seller","God"),
-            new Shift("1/5 7:00PM", "Ticket Checker B", "Ticket Booth B", "Rogier")
-    );
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Time.setCellValueFactory(new PropertyValueFactory<Shift,String>("time"));
-        Place.setCellValueFactory(new PropertyValueFactory<Shift,String>("place"));
-        Booth.setCellValueFactory(new PropertyValueFactory<Shift,String>("booth"));
-        Admin.setCellValueFactory(new PropertyValueFactory<Shift,String>("admin"));
 
+        Time.setCellValueFactory(new PropertyValueFactory<ShiftInfo,String>("time"));
+        Place.setCellValueFactory(new PropertyValueFactory<ShiftInfo,String>("place"));
+        Booth.setCellValueFactory(new PropertyValueFactory<ShiftInfo,String>("booth"));
+        Admin.setCellValueFactory(new PropertyValueFactory<ShiftInfo,String>("admin"));
+
+
+        ObservableList<ShiftInfo> shift = FXCollections.observableArrayList(new ShiftInfo());
+        shift.add(new ShiftInfo());
         shifts.setItems(shift);
-
-        LabelFname.setText("fornavn<3");
-
-
 
     }
 
@@ -63,6 +61,8 @@ public class FrivilligSide implements Initializable {
 
 
     }
+
+
 
 
 

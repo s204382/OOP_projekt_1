@@ -1,2 +1,2 @@
-fname lname time location 2 kitty
-charlotte 12:00 lokation 2 kitty
+time<3 place<3 booth<3 admin<3
+time2<3 place2<3
