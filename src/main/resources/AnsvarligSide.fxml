@@ -5,34 +5,108 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE"
-         xmlns:fx="http://javafx.com/fxml"
-         xmlns="http://javafx.com/javafx"
-         fx:controller="control.AnsvarligSide">
+<?import javafx.scene.text.Font?>
+<TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="control.AnsvarligSide">
     <tabs>
-        <Tab closable="false" text="See plan - admin"  fx:id="SeePlan">
+        <Tab closable="false" text="Se vagtplan">
             <content>
-                <TableView prefHeight="355.0" prefWidth="342.0" fx:id="shifts">
+                <TableView editable="true" prefHeight="316.0" prefWidth="600.0">
                     <columns>
-                        <TableColumn prefWidth="148.0" text="Time" fx:id="Time" />
-                        <TableColumn prefWidth="86.0" text="Booth" fx:id="Booth"/>
-                        <TableColumn prefWidth="137.0" text="Place" fx:id="Place"/>
-                        <TableColumn prefWidth="103.0" text="Admin" fx:id="Admin"/>
+                        <TableColumn prefWidth="121.0" text="Bod/aktivitet" />
+                        <TableColumn prefWidth="75.0" text="Tid" />
+                        <TableColumn prefWidth="127.0" text="Sted" />
+                        <TableColumn minWidth="0.0" prefWidth="91.0" text="Ansvarlig" />
+                        <TableColumn prefWidth="168.0" text="                  ">
+                            <graphic>
+                                <MenuButton mnemonicParsing="false" text="Sortering">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" text="Medarbejder" />
+                                        <MenuItem mnemonicParsing="false" text="Boder" />
+                                    </items>
+                                </MenuButton>
+                            </graphic>
+                        </TableColumn>
                     </columns>
                 </TableView>
             </content></Tab>
-        <Tab closable="false" text="Information">
+        <Tab closable="false" text="administre oplysninger">
             <content>
-                <VBox prefHeight="200.0" prefWidth="100.0" >
+                <VBox prefHeight="532.0" prefWidth="800.0">
                     <children>
-                        <Label prefHeight="27.0" prefWidth="200.0" text="First name:" /> <Label fx:id="LabelFname" prefHeight="27.0" prefWidth="200.0" /> <TextField fx:id="FnameChange" promptText="Change first name" />
-                        <Label prefHeight="27.0" prefWidth="200.0" text="Last name:" /> <TextField fx:id="LnameChange" promptText="Change last name" />
-                        <Label prefHeight="27.0" prefWidth="200.0" text="Phone:" />
-                        <Label prefWidth="200.0" text="Mail:" />
-                        <Label prefWidth="200.0" text="Password:" />
-                        <Button mnemonicParsing="false" text="Change info" fx:id="changeInfoBtn" onAction="#btnChangeInfoAdmin" />
+                        <Label prefHeight="27.0" prefWidth="200.0" text="First name:" />
+                        <Label fx:id="labelfname">namechange</Label>
+                        <TextField promptText="New first name..." fx:id="Textfname"/>
+                        <Label prefHeight="27.0" prefWidth="200.0" text="Last name"/>
+                        <Label text="NAME 2" fx:id="labellname" />
+                        <TextField promptText="New last name....." fx:id="Textlname"/>
+                        <Label prefHeight="27.0" prefWidth="200.0" text="Phone" />
+                        <Label text="NR" />
+                        <TextField promptText="New number...." />
+                        <Label prefWidth="200.0" text="Mail" />
+                        <Label text="MAIL" />
+                        <TextField promptText="New email...." />
+                        <Label prefWidth="200.0" text="Password" />
+                        <Label text="CODE" />
+                        <TextField promptText="New password..." />
+                        <Label prefHeight="18.0" prefWidth="782.0" text="Write the telephone number of the person who's information you wish to change:" />
+                        <TextArea fx:id="editMail" prefHeight="0.0" prefWidth="800.0" promptText="Write their phone number here.." />
+                        <HBox layoutX="10.0" layoutY="408.0" prefHeight="34.0" prefWidth="800.0" />
+                        <Button fx:id="changeInfo" mnemonicParsing="false" text="Change info" />
+                        <HBox prefHeight="34.0" prefWidth="800.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="18.0" prefWidth="783.0" text="Make a new voulenteer:">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                            </children></HBox>
+                        <HBox prefHeight="236.0" prefWidth="800.0">
+                            <children>
+                                <VBox prefHeight="158.0" prefWidth="219.0">
+                                    <children>
+                                        <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="218.0" text="First Name : " />
+                                        <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="219.0" text="Last Name : " />
+                                        <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="36.0" prefHeight="26.0" prefWidth="218.0" text="Phone Number : " />
+                                        <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="63.0" prefHeight="26.0" prefWidth="218.0" text="Email : " />
+                                        <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="89.0" prefHeight="26.0" prefWidth="217.0" text="Password : " />
+                                        <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="116.0" prefHeight="26.0" prefWidth="217.0" text="Are they an administrator? : " />
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="161.0" prefWidth="357.0">
+                                    <children>
+                                        <TextField promptText="First Name" />
+                                        <TextField promptText="Last Name" />
+                                        <TextField promptText="Phone Nr." />
+                                        <TextField promptText="Email" />
+                                        <TextField promptText="Password" />
+                                        <CheckBox mnemonicParsing="false" prefHeight="28.0" prefWidth="53.0" />
+                                    </children>
+                                </VBox>
+                                <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="154.0" text="Finish new profile" />
+                            </children>
+                        </HBox>
                     </children>
                 </VBox>
             </content></Tab>
+        <Tab closable="false" text="Administre bod">
+            <content>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Label prefWidth="600.0" text="Opret ny bod" textAlignment="CENTER" underline="true" />
+                        <Label prefHeight="27.0" prefWidth="200.0" text="Bod navn" />
+                        <TextField fx:id="boothnameW" prefWidth="200.0" promptText="booth name" />
+                        <Label prefHeight="27.0" prefWidth="200.0" text="Ansvarlig" />
+                        <TextField fx:id="boothresponsibleW" prefWidth="200.0" promptText="resonsible" />
+                        <Label prefHeight="27.0" prefWidth="200.0" text="Sted" />
+                        <TextField fx:id="boothplaceW" prefWidth="200.0" promptText="place" />
+                        <Button fx:id="Makebooth" onAction="#createBooth" text="Create booth" textAlignment="CENTER" />
+                        <Label layoutX="10.0" layoutY="10.0" prefWidth="600.0" text="Ret bod" textAlignment="CENTER" underline="true" />
+                        <TextArea prefHeight="31.0" prefWidth="600.0" promptText="Hvilken bod du vil rette" />
+
+                        <Button mnemonicParsing="false" text="Ret bod" />
+                    </children>
+                </VBox>
+            </content>
+        </Tab>
     </tabs>
 </TabPane>

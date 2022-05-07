@@ -7,17 +7,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AnsvarligSide implements Initializable {
-    public Label label1;
-    public control.Frivillig frivilligApp;
+public class AnsvarligSide {
+    public Frivillig frivilligApp;
     //create booth
     public TextField boothnameW;
     public TextField boothresponsibleW;
     public TextField boothplaceW;
+
 
     //read booth info
     /*BufferedReader readerbooth = new BufferedReader(new FileReader("C:\\Users\\charl\\OneDrive\\Dokumenter\\GitHub\\Projekt1\\Gitty\\booth.txt"));
@@ -27,46 +26,41 @@ public class AnsvarligSide implements Initializable {
     String placebooth = boothinfo[1]; // placement of booth
     String responsiblebooth = boothinfo[3]; // responsible of the booth*/
 
+
+
     public void setMainController(Frivillig frivillig){
         this.frivilligApp=frivillig;
 
     }
 
+    public Label labelfname;
+    public String enteredFname;
+    public TextField Textfname;
+
+    public Label labellname;
+    public TextField Textlname;
+    public String enteredLname;
 
 
-    public TableView<ShiftInfo> shifts;
-
-
-    public TableColumn<ShiftInfo, String> Time;
-
-    public TableColumn<ShiftInfo, String> Place;
-
-    public TableColumn<ShiftInfo, String> Booth;
-
-    public TableColumn<ShiftInfo, String> Admin;
-
-    public Button changeInfoBtn;
-
-    public Label LabelFname;
-
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        Time.setCellValueFactory(new PropertyValueFactory<ShiftInfo,String>("time"));
-        Place.setCellValueFactory(new PropertyValueFactory<ShiftInfo,String>("place"));
-        Booth.setCellValueFactory(new PropertyValueFactory<ShiftInfo,String>("booth"));
-        Admin.setCellValueFactory(new PropertyValueFactory<ShiftInfo,String>("admin"));
-
-        ObservableList<ShiftInfo> shift = FXCollections.observableArrayList();
-
-
-        shifts.setItems(shift);
-
-    }
 
     public void btnChangeInfoAdmin(ActionEvent actionEvent) {
+        labelfname.setText("hej her er navn");
+
+        //labellname.setText("efternavn");
+
+
+        /*enteredLname=Textfname.getText();
+        enteredFname=Textlname.getText();*/
+
+
+
+
+
     }
+
+    public void createBooth(ActionEvent actionEvent) {
+    }
+
 
     /*public void createBooth(ActionEvent actionEvent) throws IOException {
         BufferedWriter boothWriter = new BufferedWriter(new FileWriter("C:\\Users\\charl\\OneDrive\\Dokumenter\\GitHub\\OOP_projekt_1\\booth.txt", true));
@@ -107,4 +101,5 @@ public class AnsvarligSide implements Initializable {
 
 
 }
+
 

@@ -18,6 +18,7 @@ public class FrivilligSide implements Initializable {
     public control.Frivillig frivilligApp;
 
 
+
     public void setMainController(Frivillig frivillig){
         this.frivilligApp=frivillig;
 
@@ -35,13 +36,40 @@ public class FrivilligSide implements Initializable {
 
     public Button changeInfoBtn;
 
-    public Label LabelFname;
+    public Label LabelFnameFri;
+    public Label LabelLnameFri;
 
+ public void load() throws FileNotFoundException {
+     BufferedReader readerPInfo = new BufferedReader(new FileReader("C:\\Users\\charl\\OneDrive\\Dokumenter\\GitHub\\OOP_projekt_1\\coworker.txt"));
+     try {
+         String readPInfolines;
+         readPInfolines=readerPInfo.readLine();
 
+         while(readPInfolines!=null) { //ready from
+
+             String[] infosplit = readPInfolines.trim().split("\\s+");
+             String mailfromtxt = infosplit[0]; // mail
+             String codefromtxt = infosplit[1]; // code
+             String rolefromtxt = infosplit[2]; // role
+             String fnamefromtxt = infosplit[3]; // first name
+             String lnamefromtxt = infosplit[4]; // last name
+
+             LabelFnameFri.setText(fnamefromtxt);
+             LabelLnameFri.setText(lnamefromtxt);
+
+         }
+
+     } catch (FileNotFoundException e) {
+         e.printStackTrace();
+     } catch (IOException e) {
+         e.printStackTrace();
+     }
+ }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
 
         Time.setCellValueFactory(new PropertyValueFactory<ShiftInfo,String>("time"));
         Place.setCellValueFactory(new PropertyValueFactory<ShiftInfo,String>("place"));
@@ -50,8 +78,8 @@ public class FrivilligSide implements Initializable {
 
 
         ObservableList<ShiftInfo> shift = FXCollections.observableArrayList(new ShiftInfo());
-        shift.add(new ShiftInfo());
         shifts.setItems(shift);
+
 
     }
 
@@ -61,6 +89,8 @@ public class FrivilligSide implements Initializable {
 
 
     }
+
+
 
 
 

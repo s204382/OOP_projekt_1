@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.TextField?>
-<TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE"
-         xmlns:fx="http://javafx.com/fxml"
-         xmlns="http://javafx.com/javafx"
-         fx:controller="control.FrivilligSide">
+<TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.FrivilligSide">
     <tabs>
-        <Tab closable="false" text="See plan"  fx:id="SeePlan">
+        <Tab fx:id="SeePlan" closable="false" text="See plan">
             <content>
-                <TableView prefHeight="355.0" prefWidth="342.0" fx:id="shifts">
+                <TableView fx:id="shifts" prefHeight="355.0" prefWidth="342.0">
                     <columns>
-                        <TableColumn prefWidth="148.0" text="Time" fx:id="Time" />
-                        <TableColumn prefWidth="86.0" text="Booth" fx:id="Booth"/>
-                        <TableColumn prefWidth="137.0" text="Place" fx:id="Place"/>
-                        <TableColumn prefWidth="103.0" text="Admin" fx:id="Admin"/>
+                        <TableColumn fx:id="Time" prefWidth="148.0" text="Time" />
+                        <TableColumn fx:id="Booth" prefWidth="86.0" text="Booth" />
+                        <TableColumn fx:id="Place" prefWidth="137.0" text="Place" />
+                        <TableColumn fx:id="Admin" prefWidth="103.0" text="Admin" />
                     </columns>
                 </TableView>
             </content></Tab>
         <Tab closable="false" text="Information">
             <content>
-                <VBox prefHeight="200.0" prefWidth="100.0" >
+                <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>
-                        <Label prefHeight="27.0" prefWidth="200.0" text="First name:" /> <Label fx:id="LabelFname" prefHeight="27.0" prefWidth="200.0" /> <TextField fx:id="FnameChange" promptText="Change first name" />
-                        <Label prefHeight="27.0" prefWidth="200.0" text="Last name:" /> <TextField fx:id="LnameChange" promptText="Change last name" />
+                        <Label prefHeight="27.0" prefWidth="200.0" text="First name:" />
+                        <Label fx:id="LabelFnameFri"/>
+                        <TextField fx:id="FnameChange" promptText="Change first name" />
+
+
+                        <Label prefHeight="27.0" prefWidth="200.0" text="Last name:" />
+                        <Label  prefHeight="27.0" prefWidth="200.0" fx:id="LabelLnameFri"  />
+                        <TextField fx:id="LnameChange" promptText="Change last name" />
+
                         <Label prefHeight="27.0" prefWidth="200.0" text="Phone:" />
+
                         <Label prefWidth="200.0" text="Mail:" />
+
                         <Label prefWidth="200.0" text="Password:" />
-                        <Button mnemonicParsing="false" text="Change info" fx:id="changeInfoBtn" onAction="#btnChangeInfo" />
+
+                        <Button fx:id="changeInfoBtn" mnemonicParsing="false" onAction="#btnChangeInfo" text="Change info" />
                     </children>
                 </VBox>
             </content></Tab>

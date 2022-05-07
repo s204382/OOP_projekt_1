@@ -25,10 +25,8 @@ public class Frivillig extends Application {
         this.stage = primaryStage;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Primary.fxml")); //loader fra en class i re
         FlowPane flowPane = loader.load();
-
         primaryScene guiContr = loader.getController();
         guiContr.setMainController(this);
-
         Scene scene = new Scene(flowPane,400,200 );
         stage.setScene(scene);
         stage.show();
@@ -48,7 +46,6 @@ public void Login() throws IOException {
     public void FrivilligSide() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FrivilligSide.fxml")); //loader fra en class i re
         TabPane pane = loader.load();
-        //FrivilligSide controller = loader.getController();
         FrivilligSide controller = loader.getController();
         controller.setMainController(this);
         Scene scene = new Scene(pane,800,600 );

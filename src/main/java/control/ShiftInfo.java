@@ -13,9 +13,6 @@ public class ShiftInfo {
     private String booth;
     private String admin;
 
-
-
-
     //String time, String place, String booth, String admin
     public String ShiftInfo(String time, String place, String booth, String admin) throws IOException {
         this.time = this.time;
@@ -35,14 +32,8 @@ public class ShiftInfo {
         BufferedReader Shiftreader = new BufferedReader(new FileReader("C:\\Users\\charl\\OneDrive\\Dokumenter\\GitHub\\OOP_projekt_1\\shift.txt"));
         String ShiftLine = Shiftreader.readLine();
         String[] infosplit = ShiftLine.trim().split("\\s+");
-
-
-        while(ShiftLine!=null) {
-            this.time = infosplit[0]; // time
-            ShiftLine = Shiftreader.readLine();
-        }
-
-        return this.time;
+        this.time = infosplit[0]; // time
+        return time;
 
     }
 
@@ -75,7 +66,5 @@ public class ShiftInfo {
 
 
 }
-
-
 
 
